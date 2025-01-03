@@ -5,11 +5,11 @@ import '../size_config.dart';
 
 class RoundedIconBtn extends StatelessWidget {
   const RoundedIconBtn({
-    Key? key,
+    super.key,
     required this.icon,
     required this.press,
     this.showShadow = false,
-  }) : super(key: key);
+  });
 
   final IconData icon;
   final GestureTapCancelCallback press;
@@ -33,8 +33,7 @@ class RoundedIconBtn extends StatelessWidget {
       ),
       child: TextButton(
         style: TextButton.styleFrom(
-          padding: EdgeInsets.zero,
-          primary: kPrimaryColor,
+          foregroundColor: kPrimaryColor, padding: EdgeInsets.zero,
           backgroundColor: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),

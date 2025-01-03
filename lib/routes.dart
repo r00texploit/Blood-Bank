@@ -12,7 +12,7 @@ import 'screens/sign_up/sign_up_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
   PromptScreen.routeName: (context) => const PromptScreen(),
-  SignInScreen.routeName: (context) => const SignInScreen(),
+  SignInScreen.routeName: (context) => SignInScreen(),
   ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
   LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
   SignUpScreen.routeName: (context) => SignUpScreen(),

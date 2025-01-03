@@ -6,11 +6,11 @@ import '../../../size_config.dart';
 
 class IconBtnWithCounter extends StatelessWidget {
   const IconBtnWithCounter({
-    Key? key,
+    super.key,
     required this.svgSrc,
     this.numOfitem = 0,
     required this.press,
-  }) : super(key: key);
+  });
 
   final String svgSrc;
   final int numOfitem;

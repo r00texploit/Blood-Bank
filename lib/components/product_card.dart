@@ -8,11 +8,11 @@ import '../size_config.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
-    Key? key,
+    super.key,
     this.width = double.infinity,
     this.aspectRetio = 1.02,
     required this.product,
-  }) : super(key: key);
+  });
 
   final double width, aspectRetio;
   final Person product;

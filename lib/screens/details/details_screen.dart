@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mobileapp/models/personlist.dart';
 
-import '../../models/personlist.dart';
 import 'components/body.dart';
 import 'components/custom_app_bar.dart';
 
 class DetailsScreen extends StatelessWidget {
   static String routeName = "/details";
+
+  const DetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

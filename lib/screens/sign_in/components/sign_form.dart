@@ -12,7 +12,7 @@ import '../../../size_config.dart';
 
 class SignForm extends StatefulWidget {
   static const String id = 'LoginScreen';
-  const SignForm({Key? key}) : super(key: key);
+  const SignForm({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -20,7 +20,7 @@ class SignForm extends StatefulWidget {
 }
 
 class _SignFormState extends State<SignForm> {
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   final _formKey = GlobalKey<FormState>();
   String? email;
   String? password;
@@ -86,10 +86,17 @@ class _SignFormState extends State<SignForm> {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
                   KeyboardUtil.hideKeyboard(context);
-                  UserCredential existingUser =
-                      await _auth.signInWithEmailAndPassword(
-                          email: email!, password: password!);
-                  Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                  try {
+                    UserCredential existingUser =
+                        await _auth.signInWithEmailAndPassword(
+                            email: email!, password: password!);
+                    if (existingUser.user != null) {
+                      Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                    }
+                  } on Exception catch (e) {
+                    // TODO
+                     print(e.toString());
+                  }
                 }
               } catch (e) {
                 print(e);

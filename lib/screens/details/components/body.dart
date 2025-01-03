@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/components/default_button.dart';
 import 'package:mobileapp/models/personlist.dart';
-import 'package:mobileapp/size_config.dart';
 
-import 'color_dots.dart';
 import 'product_description.dart';
 import 'top_rounded_container.dart';
 import 'product_images.dart';
@@ -11,7 +8,7 @@ import 'product_images.dart';
 class Body extends StatelessWidget {
   final Person product;
 
-  const Body({Key? key, required this.product}) : super(key: key);
+  const Body({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {

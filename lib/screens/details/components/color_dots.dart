@@ -7,16 +7,15 @@ import '../../../size_config.dart';
 
 class ColorDots extends StatelessWidget {
   const ColorDots({
-    Key? key,
+    super.key,
     required this.product,
-  }) : super(key: key);
+  });
 
   final Person product;
 
   @override
   Widget build(BuildContext context) {
     // Now this is fixed and only for demo
-    int selectedColor = 3;
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
@@ -41,10 +40,10 @@ class ColorDots extends StatelessWidget {
 
 class ColorDot extends StatelessWidget {
   const ColorDot({
-    Key? key,
+    super.key,
     required this.color,
     this.isSelected = false,
-  }) : super(key: key);
+  });
 
   final Color color;
   final bool isSelected;

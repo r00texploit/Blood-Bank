@@ -6,6 +6,8 @@ import '../../../size_config.dart';
 import 'section_title.dart';
 
 class PeopleList extends StatelessWidget {
+  const PeopleList({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -25,8 +27,9 @@ class PeopleList extends StatelessWidget {
               ...List.generate(
                 demoPersons.length,
                 (index) {
-                  if (demoPersons[index].isPopular)
+                  if (demoPersons[index].isPopular) {
                     return ProductCard(product: demoPersons[index]);
+                  }
 
                   return SizedBox
                       .shrink(); 

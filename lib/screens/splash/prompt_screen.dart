@@ -5,7 +5,7 @@ import 'package:mobileapp/size_config.dart';
 class PromptScreen extends StatelessWidget {
   static String routeName = "/home";
 
-  const PromptScreen({Key? key}) : super(key: key);
+  const PromptScreen({super.key});
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);

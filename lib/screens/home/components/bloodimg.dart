@@ -5,8 +5,8 @@ import 'section_title.dart';
 
 class BloodImage extends StatelessWidget {
   const BloodImage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +48,9 @@ class BloodImage extends StatelessWidget {
 
 class SpecialOfferCard extends StatelessWidget {
   const SpecialOfferCard({
-    Key? key,
+    super.key,
     required this.image,
-  }) : super(key: key);
+  });
 
   final String image;
 

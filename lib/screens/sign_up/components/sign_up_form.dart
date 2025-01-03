@@ -4,14 +4,13 @@ import 'package:mobileapp/components/default_button.dart';
 import 'package:mobileapp/components/form_error.dart';
 import 'package:mobileapp/screens/home/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
 class SignUpForm extends StatefulWidget {
   static const String id = 'RegisterScreen';
-  const SignUpForm({Key? key}) : super(key: key);
+  const SignUpForm({super.key});
 
   @override
   _SignUpFormState createState() => _SignUpFormState();
@@ -69,10 +68,18 @@ class _SignUpFormState extends State<SignUpForm> {
               try {
                 if (_formKey.currentState!.validate()) {
                   // if all are valid then go to success screen
-                  UserCredential newUser =
-                      await _auth.createUserWithEmailAndPassword(
-                          email: email!, password: password!);
-                  Navigator.pushNamed(context, HomeScreen.routeName);
+
+                  try {
+                    UserCredential newUser =
+                        await _auth.createUserWithEmailAndPassword(
+                            email: email!, password: password!);
+                    if (newUser.user != null) {
+                      Navigator.pushNamed(context, HomeScreen.routeName);
+                    }
+                  } on Exception catch (e) {
+                    // TODO
+                    print(e.toString());
+                  }
                 }
               } catch (e) {
                 print(e);
