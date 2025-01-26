@@ -1,4 +1,3 @@
-
 import 'personlist.dart';
 
 class Cart {
@@ -11,7 +10,7 @@ class Cart {
 //User Lists
 
 List<Cart> demoCarts = [
-  Cart(product: demoPersons[0], numOfItem: 2),
-  Cart(product: demoPersons[1], numOfItem: 1),
-  Cart(product: demoPersons[3], numOfItem: 1),
+  Cart(product: person.persons![0], numOfItem: 2),
+  Cart(product: person.persons![1], numOfItem: 1),
+  Cart(product: person.persons![3], numOfItem: 1),
 ];

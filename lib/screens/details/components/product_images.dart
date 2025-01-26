@@ -29,7 +29,7 @@ class _ProductImagesState extends State<ProductImages> {
             child: Hero(
               tag: widget.product.id.toString(),
               child: Image.asset(
-                widget.product.images[selectedImage],
+                widget.product.images![selectedImage],
                 fit: BoxFit.cover,
               ),
             ),
@@ -39,7 +39,7 @@ class _ProductImagesState extends State<ProductImages> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ...List.generate(widget.product.images.length,
+            ...List.generate(widget.product.images!.length,
                 (index) => buildSmallProductPreview(index)),
           ],
         )
@@ -67,7 +67,7 @@ class _ProductImagesState extends State<ProductImages> {
               color: kPrimaryColor.withOpacity(selectedImage == index ? 1 : 0)),
         ),
         child: Image.asset(
-          widget.product.images[index],
+          widget.product.images![index],
           fit: BoxFit.fill,
         ),
       ),

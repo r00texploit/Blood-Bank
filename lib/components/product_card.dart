@@ -46,7 +46,7 @@ class ProductCard extends StatelessWidget {
                       child: Hero(
                         tag: product.id.toString(),
                         child: Image.asset(
-                          product.images[0],
+                          product.images![0],
                           height: 100,
                           width: 30,
                         ),
@@ -62,14 +62,14 @@ class ProductCard extends StatelessWidget {
                         height: getProportionateScreenWidth(25),
                         width: getProportionateScreenWidth(28),
                         decoration: BoxDecoration(
-                          color: product.isFavourite
+                          color: product.isFavourite!
                               ? kPrimaryColor.withOpacity(0.15)
                               : kSecondaryColor.withOpacity(0.1),
                           shape: BoxShape.circle,
                         ),
                         child: SvgPicture.asset(
                           "assets/icons/Heart Icon_2.svg",
-                          color: product.isFavourite
+                          color: product.isFavourite!
                               ? Color(0xFFFF4848)
                               : Color(0xFFDBDEE4),
                         ),
@@ -79,7 +79,7 @@ class ProductCard extends StatelessWidget {
                   Expanded(
                     flex: 3,
                     child: Text(
-                      product.title,
+                      product.title!,
                       style: TextStyle(color: Colors.black),
                       maxLines: 10,
                     ),
