@@ -114,7 +114,7 @@ class AddProduct extends StatelessWidget {
                     lable: 'Blood Group',
                     icon: const Icon(Icons.bloodtype_outlined,
                         color: Colors.green),
-                    input: TextInputType.number,
+                    input: TextInputType.text,
                     obscureText: false,
                   ),
                   const SizedBox(height: 20),

@@ -74,8 +74,38 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "cloudinary_api",
+      "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/cloudinary_api-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cloudinary_dart",
+      "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/cloudinary_dart-0.0.11",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "cloudinary_public",
+      "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/cloudinary_public-0.23.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "cloudinary_url_gen",
+      "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/cloudinary_url_gen-1.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "convert",
+      "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -96,6 +126,18 @@
       "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8",
       "packageUri": "lib/",
       "languageVersion": "3.1"
+    },
+    {
+      "name": "dio",
+      "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/dio-5.8.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "dio_web_adapter",
+      "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/dio_web_adapter-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
     },
     {
       "name": "fake_async",
@@ -548,6 +590,12 @@
       "languageVersion": "3.5"
     },
     {
+      "name": "universal_io",
+      "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "uuid",
       "rootUri": "file:///C:/Users/%D8%AE%D8%A7%D9%84%D8%AF%20%D8%A7%D9%84%D9%86%D9%8A%D8%A7%D8%AF%D9%89/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-4.5.1",
       "packageUri": "lib/",
@@ -608,7 +656,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2025-02-02T22:48:36.802574Z",
+  "generated": "2025-02-02T23:51:42.162197Z",
   "generator": "pub",
   "generatorVersion": "3.6.1",
   "flutterRoot": "file:///C:/flutter",

@@ -66,7 +66,7 @@ class AuthController extends GetxController {
 
   @override
   void onInit() {
-    collectionReference = firebaseFirestore.collection("user");
+    collectionReference = firebaseFirestore.collection("users");
     email = TextEditingController();
     password = TextEditingController();
     Rpassword = TextEditingController();

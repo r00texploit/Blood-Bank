@@ -23,7 +23,7 @@ class _ShowUserState extends State<ShowUser> {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection('user').snapshots(),
+          stream: FirebaseFirestore.instance.collection('users').snapshots(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(child: CircularProgressIndicator());
@@ -56,6 +56,8 @@ class _ShowUserState extends State<ShowUser> {
                 return UserCard(
                   userId: user.id,
                   email: user['email'],
+                  name: user['name'],
+                  bloodGroup: user['bloodType'],
                 );
               },
             );
@@ -69,11 +71,14 @@ class _ShowUserState extends State<ShowUser> {
 class UserCard extends StatelessWidget {
   final String userId;
   final String email;
-
+  final String name;
+  final String bloodGroup;
   const UserCard({
     Key? key,
     required this.userId,
     required this.email,
+    required this.bloodGroup,
+    required this.name,
   }) : super(key: key);
 
   @override
@@ -89,6 +94,8 @@ class UserCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildUserInfoRow('User Email:', email, 'email', context),
+            _buildUserInfoRow('User Name:', name, 'name', context),
+            _buildUserInfoRow('Blood Group:', bloodGroup, 'bloodType', context),
             Center(
               child: CustomTextButton(
                 lable: 'Delete',
@@ -150,7 +157,7 @@ class UserCard extends StatelessWidget {
 
             try {
               await FirebaseFirestore.instance
-                  .collection('user')
+                  .collection('users')
                   .doc(userId)
                   .update({field: controller.text});
 
@@ -176,7 +183,7 @@ class UserCard extends StatelessWidget {
     showDialog(context: context, builder: (_) => const LoadingDialog());
 
     try {
-      await FirebaseFirestore.instance.collection('user').doc(userId).delete();
+      await FirebaseFirestore.instance.collection('users').doc(userId).delete();
       Navigator.of(context).pop();
       showbar(
         title: 'Success',

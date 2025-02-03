@@ -66,12 +66,12 @@ class _ManagementState extends State<Management> {
               ),
               ManagementCard(
                 title: 'Add Blood ',
-                icon: Icons.add_shopping_cart,
+                icon: Icons.bloodtype_outlined,
                 destination: AddProduct(),
               ),
               ManagementCard(
                 title: 'Show Products',
-                icon: Icons.shopping_cart,
+                icon: Icons.bloodtype,
                 destination: Showproducts(),
               ),
               ManagementCard(

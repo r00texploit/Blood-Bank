@@ -1,11 +1,17 @@
+import 'dart:convert';
 import 'dart:io';
 
+import 'package:cloudinary_api/uploader/cloudinary_uploader.dart';
+import 'package:cloudinary_public/cloudinary_public.dart';
+import 'package:cloudinary_api/src/request/model/uploader_params.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:mobileapp/main.dart';
 import 'package:mobileapp/models/personlist.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:http/http.dart' as http;
 
 class PersonController extends GetxController {
   // Text Editing Controllers
@@ -139,10 +145,10 @@ class PersonController extends GetxController {
       isPersonFavoriteController.clear();
       isPersonPopularController.clear();
 
-      Get.snackbar('Success', 'Person added successfully');
+      Get.snackbar('Success', 'Donor added successfully');
     } catch (e) {
-      print('Error adding person: $e');
-      Get.snackbar('Error', 'Failed to add person');
+      print('Error adding Donor: $e');
+      Get.snackbar('Error', 'Failed to add Donor');
     }
   }
 
@@ -156,8 +162,8 @@ class PersonController extends GetxController {
         return null;
       }
     } catch (e) {
-      print('Error getting person: $e');
-      Get.snackbar('Error', 'Failed to get person');
+      print('Error getting Donor: $e');
+      Get.snackbar('Error', 'Failed to get Donor');
       return null;
     }
   }
@@ -185,10 +191,10 @@ class PersonController extends GetxController {
       isPersonFavoriteController.clear();
       isPersonPopularController.clear();
 
-      Get.snackbar('Success', 'Person updated successfully');
+      Get.snackbar('Success', 'Donor updated successfully');
     } catch (e) {
-      print('Error updating person: $e');
-      Get.snackbar('Error', 'Failed to update person');
+      print('Error updating Donor: $e');
+      Get.snackbar('Error', 'Failed to update Donor');
     }
   }
 
@@ -196,10 +202,10 @@ class PersonController extends GetxController {
   Future<void> deletePerson(String personId) async {
     try {
       await _personCollection.doc(personId).delete();
-      Get.snackbar('Success', 'Person deleted successfully');
+      Get.snackbar('Success', 'Donor deleted successfully');
     } catch (e) {
-      print('Error deleting person: $e');
-      Get.snackbar('Error', 'Failed to delete person');
+      print('Error deleting Donor: $e');
+      Get.snackbar('Error', 'Failed to delete Donor');
     }
   }
 
@@ -211,6 +217,51 @@ pickImage() async {
     Get.snackbar('Error', 'No image selected');
   }
 }
+
+upload() async{
+  var response = await cloudinary.uploader().upload(File(personImageUrlController.text),
+    params: UploadParams(
+        publicId: 'person_images/${personNameController.text}',
+        uniqueFilename: false,
+        overwrite: true));
+  print(response?.data?.publicId);
+  print(response?.data?.secureUrl);
+}
+
+Future<String> uploadImageToCloudinary(XFile pickedFile, String personName) async {
+    try {
+      // Prepare the Cloudinary upload URL
+      final uploadUrl = Uri.parse('https://api.cloudinary.com/v1_1/dgz06x34f/image/upload');
+      
+      // Create a multipart request
+      final request = http.MultipartRequest('POST', uploadUrl)
+        ..fields['upload_preset'] = 'YOUR_UPLOAD_PRESET'
+        ..fields['public_id'] = 'person_images/$personName'
+        ..files.add(await http.MultipartFile.fromPath('file', pickedFile.path));
+      
+      // Send the request
+      final response = await request.send();
+      
+      // Check if the upload was successful
+      if (response.statusCode == 200) {
+        final responseData = await response.stream.bytesToString();
+        final jsonResponse = json.decode(responseData);
+        final downloadUrl = jsonResponse['secure_url'];
+        
+        // Update the personImageUrlController with the download URL
+        personImageUrlController.text = downloadUrl;
+        Get.snackbar('Success', 'Image uploaded successfully');
+        return downloadUrl;
+      } else {
+        Get.snackbar('Error', 'Failed to upload image');
+        return '';
+      }
+    } catch (e) {
+      print('Error uploading image: $e');
+      Get.snackbar('Error', 'Failed to upload image');
+      return '';
+    }
+  }
 
   Future<String> uploadImageToFirebase(XFile pickedFile,String personName) async {
     try {

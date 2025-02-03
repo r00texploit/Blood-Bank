@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="C:\halim\bloodbank\android\app"
+    name=":app"
+    type="APP"
+    maven="android:app:"
+    agpVersion="8.3.2"
+    buildFolder="C:\halim\bloodbank\build\app"
+    bootClassPath="C:\sdk\platforms\android-34\android.jar;C:\sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

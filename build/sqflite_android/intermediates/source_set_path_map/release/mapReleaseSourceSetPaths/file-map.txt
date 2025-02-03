@@ -1,0 +1,27 @@
+com.tekartik.sqflite.sqflite_android-jetified-lifecycle-process-2.7.0-0 C:\Users\خالد النيادى\.gradle\caches\transforms-4\044ebf06299daa8b25225e41a757e80f\transformed\jetified-lifecycle-process-2.7.0\res
+com.tekartik.sqflite.sqflite_android-lifecycle-viewmodel-2.7.0-1 C:\Users\خالد النيادى\.gradle\caches\transforms-4\0bca07cfd967c34b9027469e892adbbd\transformed\lifecycle-viewmodel-2.7.0\res
+com.tekartik.sqflite.sqflite_android-jetified-lifecycle-livedata-core-ktx-2.7.0-2 C:\Users\خالد النيادى\.gradle\caches\transforms-4\161ebaa2735e6a3bb294da742e5e6c32\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.tekartik.sqflite.sqflite_android-jetified-core-ktx-1.13.1-3 C:\Users\خالد النيادى\.gradle\caches\transforms-4\175548886a10df8fa1a2e143bdc15a3f\transformed\jetified-core-ktx-1.13.1\res
+com.tekartik.sqflite.sqflite_android-core-runtime-2.2.0-4 C:\Users\خالد النيادى\.gradle\caches\transforms-4\24fb8eff756322d229df3c9fb5a39faa\transformed\core-runtime-2.2.0\res
+com.tekartik.sqflite.sqflite_android-jetified-activity-1.8.1-5 C:\Users\خالد النيادى\.gradle\caches\transforms-4\2bd77a8abaa99b296c3a6d2009ddd1a1\transformed\jetified-activity-1.8.1\res
+com.tekartik.sqflite.sqflite_android-jetified-annotation-experimental-1.4.0-6 C:\Users\خالد النيادى\.gradle\caches\transforms-4\2e8b811414aff682e667c59181db3545\transformed\jetified-annotation-experimental-1.4.0\res
+com.tekartik.sqflite.sqflite_android-lifecycle-livedata-core-2.7.0-7 C:\Users\خالد النيادى\.gradle\caches\transforms-4\3a2861804c1efd5daeaf2f2f5df12494\transformed\lifecycle-livedata-core-2.7.0\res
+com.tekartik.sqflite.sqflite_android-lifecycle-runtime-2.7.0-8 C:\Users\خالد النيادى\.gradle\caches\transforms-4\59035d53cbb30bf944ba90062a3c2536\transformed\lifecycle-runtime-2.7.0\res
+com.tekartik.sqflite.sqflite_android-jetified-window-1.2.0-9 C:\Users\خالد النيادى\.gradle\caches\transforms-4\5f874332689ce8a4d82ad4436a7a7802\transformed\jetified-window-1.2.0\res
+com.tekartik.sqflite.sqflite_android-jetified-lifecycle-viewmodel-savedstate-2.7.0-10 C:\Users\خالد النيادى\.gradle\caches\transforms-4\78d9fedc5d61baea5757b9ae64306032\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.tekartik.sqflite.sqflite_android-lifecycle-livedata-2.7.0-11 C:\Users\خالد النيادى\.gradle\caches\transforms-4\831426c896754d60760654e3826f4582\transformed\lifecycle-livedata-2.7.0\res
+com.tekartik.sqflite.sqflite_android-jetified-window-java-1.2.0-12 C:\Users\خالد النيادى\.gradle\caches\transforms-4\889b8b35196a568e4dca2ac842de0502\transformed\jetified-window-java-1.2.0\res
+com.tekartik.sqflite.sqflite_android-jetified-tracing-1.2.0-13 C:\Users\خالد النيادى\.gradle\caches\transforms-4\8aaeb56103ace251df91b397ba1d0a33\transformed\jetified-tracing-1.2.0\res
+com.tekartik.sqflite.sqflite_android-fragment-1.7.1-14 C:\Users\خالد النيادى\.gradle\caches\transforms-4\9725b7e664cdb4bff82a46468519a643\transformed\fragment-1.7.1\res
+com.tekartik.sqflite.sqflite_android-jetified-profileinstaller-1.3.1-15 C:\Users\خالد النيادى\.gradle\caches\transforms-4\a04bb1bf84e6171b1bd6c6acd9854a01\transformed\jetified-profileinstaller-1.3.1\res
+com.tekartik.sqflite.sqflite_android-jetified-core-1.0.0-16 C:\Users\خالد النيادى\.gradle\caches\transforms-4\ad03f30e792b90232f3ce96f9a085205\transformed\jetified-core-1.0.0\res
+com.tekartik.sqflite.sqflite_android-core-1.13.1-17 C:\Users\خالد النيادى\.gradle\caches\transforms-4\c5511cabdc8da68e57ac19cd8823fafe\transformed\core-1.13.1\res
+com.tekartik.sqflite.sqflite_android-jetified-startup-runtime-1.1.1-18 C:\Users\خالد النيادى\.gradle\caches\transforms-4\edbc6f3c27846d0620aadf322c5af98e\transformed\jetified-startup-runtime-1.1.1\res
+com.tekartik.sqflite.sqflite_android-jetified-savedstate-1.2.1-19 C:\Users\خالد النيادى\.gradle\caches\transforms-4\f7a720d4ab4def798e71428886f9a16c\transformed\jetified-savedstate-1.2.1\res
+com.tekartik.sqflite.sqflite_android-main-20 C:\Users\خالد النيادى\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite_android-2.4.0\android\src\main\res
+com.tekartik.sqflite.sqflite_android-release-21 C:\Users\خالد النيادى\AppData\Local\Pub\Cache\hosted\pub.dev\sqflite_android-2.4.0\android\src\release\res
+com.tekartik.sqflite.sqflite_android-pngs-22 C:\halim\bloodbank\build\sqflite_android\generated\res\pngs\release
+com.tekartik.sqflite.sqflite_android-resValues-23 C:\halim\bloodbank\build\sqflite_android\generated\res\resValues\release
+com.tekartik.sqflite.sqflite_android-mergeReleaseResources-24 C:\halim\bloodbank\build\sqflite_android\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.tekartik.sqflite.sqflite_android-mergeReleaseResources-25 C:\halim\bloodbank\build\sqflite_android\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.tekartik.sqflite.sqflite_android-release-26 C:\halim\bloodbank\build\sqflite_android\intermediates\merged_res\release\mergeReleaseResources

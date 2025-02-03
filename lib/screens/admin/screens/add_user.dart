@@ -61,8 +61,8 @@ class AddUser extends StatelessWidget {
   }
 
   Widget _buildForm(BuildContext context) {
-    return GetBuilder<PersonController>(
-      init: PersonController(),
+    return GetBuilder<AuthController>(
+      init: AuthController(),
       builder: (authController) {
         return Container(
           padding: const EdgeInsets.all(20.0),
@@ -96,56 +96,66 @@ class AddUser extends StatelessWidget {
 
                   // Email Field
                   CustomTextField(
-                    controller: authController.personNameController,
-                    validator: (value) => authController.validateName(value!),
+                    controller: authController.name,
+                    validator: (value) => authController.validate(value!),
                     lable: 'Donor Name',
                     icon: const Icon(Icons.person_add, color: Colors.blue),
-                    input: TextInputType.emailAddress,
+                    input: TextInputType.text,
                     obscureText: false,
                   ),
                   const SizedBox(height: 20),
 
                   // Phone Number Field
                   CustomTextField(
-                    controller: authController.personBioController,
-                    validator: (value) => authController.validateBio(value!),
-                    lable: 'Donor Bio',
+                    controller: authController.email,
+                    validator: (value) => authController.validateEmail(value!),
+                    lable: 'Donor Email',
                     icon: const Icon(Icons.description, color: Colors.green),
-                    input: TextInputType.phone,
+                    input: TextInputType.emailAddress,
                     obscureText: false,
                   ),
                   const SizedBox(height: 20),
+                    // Blood Type Field
+                    CustomTextField(
+                    controller: authController.bloodType,
+                    validator: (value) => authController.validatebloodType(value!),
+                    lable: 'Blood Type',
+                    icon: const Icon(Icons.bloodtype, color: Colors.red),
+                    input: TextInputType.text,
+                    obscureText: false,
+                    ),
+                    const SizedBox(height: 20),
 
                   // Password Field
-                    GestureDetector(
-                    onTap: () async {
-                      final pickedFile = await authController.pickImage();
-                      if (pickedFile != null&& pickedFile.path.isNotEmpty && authController.personNameController.text.isNotEmpty) {
-                        String downloadUrl = await authController.uploadImageToFirebase(pickedFile,authController.personNameController.text);
-                        authController.personImageUrlController.text = downloadUrl;
-                      }
-                        // Upload image to Firebase
+                    // GestureDetector(
+                    // onTap: () async {
+                    //   final pickedFile = await authController.pickImage();
+                    //   if (pickedFile != null&& pickedFile.path.isNotEmpty && authController.personNameController.text.isNotEmpty) {
+                    //     String downloadUrl = await authController.uploadImageToFirebase(pickedFile,authController.personNameController.text);
+                    //     authController.personImageUrlController.text = downloadUrl;
+                    //   }
+                    //     // Upload image to Firebase
                         
-                    },
-                    child: AbsorbPointer(
-                      child: CustomTextField(
-                      controller: authController.personImageUrlController,
-                      validator: (value) =>
-                        authController.validateImageUrl(value!),
-                      lable: 'Donor Image URL',
-                      icon: const Icon(Icons.image_outlined, color: Colors.red),
-                      input: TextInputType.text,
-                      obscureText: false,
-                      ),
-                    ),
-                    ),
-                  const SizedBox(height: 40),
+                    // },
+                    // child: AbsorbPointer(
+                    //   child: CustomTextField(
+                    //   controller: authController.personImageUrlController,
+                    //   validator: (value) =>
+                    //     authController.validateImageUrl(value!),
+                    //   lable: 'Donor Image URL',
+                    //   icon: const Icon(Icons.image_outlined, color: Colors.red),
+                    //   input: TextInputType.text,
+                    //   obscureText: false,
+                    //   ),
+                    // ),
+                    // ),
+                  // const SizedBox(height: 40),
 
                   // Save Button
                   Center(
                     child: ElevatedButton(
                       onPressed: () async {
-                        authController.addPerson();
+                        authController.addUser();
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                             content: Text('Donor added successfully!'),

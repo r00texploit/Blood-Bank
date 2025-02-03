@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../models/blood.dart';
+import '../widgets/loading.dart';
 
 class AddBloodController extends GetxController {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -58,13 +59,13 @@ class AddBloodController extends GetxController {
   }
 
 
-  // void showLoadingDialog() {
-  //   showDialog(
-  //     context: Get.context!,
-  //     barrierDismissible: false,
-  //     builder: (_) => const LoadingDialog(),
-  //   );
-  // }
+  void showLoadingDialog() {
+    showDialog(
+      context: Get.context!,
+      barrierDismissible: false,
+      builder: (_) => const LoadingDialog(),
+    );
+  }
 
   void showSnackbar({
     required String title,
@@ -87,7 +88,7 @@ class AddBloodController extends GetxController {
       return;
     } else {
       try {
-        // showLoadingDialog();
+        showLoadingDialog();
         await FirebaseFirestore.instance.collection('blood').doc().set({
           "donor_name": name.text,
           "blood_group": blood_group.text,
